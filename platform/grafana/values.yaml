@@ -28,9 +28,9 @@ grafana:
       client_id: grafana-sso
       client_secret: $__env{GRAFANA_SSO_CLIENT_SECRET}
       scopes: openid profile email groups
-      auth_url: https://dex.khuedoan.com/auth
-      token_url: https://dex.khuedoan.com/token
-      api_url: https://dex.khuedoan.com/userinfo
+      auth_url: https://dex.covert-cloud.com/auth
+      token_url: https://dex.covert-cloud.com/token
+      api_url: https://dex.covert-cloud.com/userinfo
   alerting:
     contactpoints.yaml:
       secret:
