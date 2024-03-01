@@ -28,6 +28,7 @@
             docker-compose_1 # TODO upgrade to version 2
             dyff
             git
+            glibcLocales
             go
             gotestsum
             iproute2
