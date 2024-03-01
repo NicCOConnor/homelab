@@ -1,14 +1,29 @@
-all:
+ers:
+  - name: "homelab"
+      user:
+            token: "kubeconfig-user-wprv69g452:mk975pgtwmgwf8wr2p7qqrks9xz2s96gd8lhfrjkvtnh7k9sxbpk45"
+
+
+            contexts:
+              - name: "homelab"
+                  context:
+                        user: "homelab"
+                            cluster: "homelab"
+
+                            current-context: "homelab"
+                            :q!
+                        :q!
+                  ll:
   vars:
     control_plane_endpoint: 192.168.1.100
     load_balancer_ip_pool:
-      - 192.168.1.224/27
+      - 192.168.1.224/28
 metal:
   children:
     masters:
       hosts:
-        metal0: {ansible_host: 192.168.1.211, mac: '1c:83:41:40:4b:f4', disk: nvme0, network_interface: eno1}
-        metal1: {ansible_host: 192.168.1.212, mac: '1c:83:41:40:52:a6', disk: nvme0, network_interface: eno1}
-        metal2: {ansible_host: 192.168.1.213, mac: '1c:83:41:40:50:a8', disk: nvme0, network_interface: eno1}
+        metal-01: {ansible_host: 192.168.1.215, mac: '7a:5d:39:0a:66:ea', disk: vda, network_interface: enp1s0}
+        metal-02: {ansible_host: 192.168.1.216, mac: '72:82:93:eb:d0:49', disk: vda, network_interface: enp1s0}
+        metal-03: {ansible_host: 192.168.1.217, mac: 'd2:1a:64:25:a6:a4', disk: vda, network_interface: enp1s0}
     workers:
       hosts:
